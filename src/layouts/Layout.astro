@@ -18,6 +18,15 @@ const { title, description = "Pallav's portfolio - Frontend Engineer with 7+ yea
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pallav.vercel.app" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <link rel="canonical" href="https://pallav.vercel.app" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
@@ -50,7 +59,7 @@ const { title, description = "Pallav's portfolio - Frontend Engineer with 7+ yea
         <div class="max-w-3xl mx-auto px-4">
           <div class="flex flex-col md:flex-row justify-between items-center">
             <p class="text-text-light dark:text-text-light-dark mb-4 md:mb-0 text-sm">
-              &copy; {new Date().getFullYear()} Pallav. All rights reserved.
+              &copy; {new Date().getFullYear()} Pallav. No rights reserved.
             </p>
             <div class="flex space-x-4">
               <a href="https://github.com/pallavkumarjha" target="_blank" rel="noopener noreferrer" class="text-text-light dark:text-text-light-dark hover:text-primary dark:hover:text-primary-dark transition-colors text-sm">
