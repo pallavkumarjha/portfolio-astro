@@ -1,0 +1,107 @@
+---
+const aiProjects = [
+  {
+    title: "JSON.baby",
+    description: "A clean and efficient JSON formatter tool for developers.",
+    url: "https://www.json.baby",
+    icon: "code"
+  },
+  {
+    title: "AI CodeSwitch",
+    description: "Convert code between different programming languages using AI.",
+    url: "https://ai-codeswitch.vercel.app",
+    icon: "refresh"
+  },
+  {
+    title: "AI RegEx Generator",
+    description: "Generate regular expressions from plain text descriptions using AI.",
+    url: "https://ai-reg.vercel.app",
+    icon: "terminal"
+  },
+  {
+    title: "AI Prompt Generator",
+    description: "Create effective prompts for any AI tool to get better results.",
+    url: "https://ai-prompt-gen.vercel.app",
+    icon: "message"
+  },
+  {
+    title: "PlotSmith",
+    description: "Generate bedtime stories and help recite them with AI assistance.",
+    url: "https://plotsmith.vercel.app",
+    icon: "book"
+  }
+];
+---
+
+<section id="ai-projects" class="py-16 bg-background dark:bg-background-dark border-b border-border dark:border-border-dark transition-colors duration-300">
+  <div class="max-w-3xl mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-6 relative inline-block">
+      AI Tools
+      <span class="absolute -bottom-1 left-0 w-1/2 h-1 bg-primary dark:bg-primary-dark rounded-full"></span>
+    </h2>
+    
+    <p class="text-text-light dark:text-text-light-dark mb-8 transition-colors duration-300">
+      I've created several AI-powered tools to solve specific problems. These projects showcase my interest in applying artificial intelligence to practical use cases.
+    </p>
+    
+    <div class="grid md:grid-cols-2 gap-6">
+      {aiProjects.map(project => (
+        <a href={project.url} target="_blank" rel="noopener noreferrer" class="group">
+          <div class="bg-background-alt dark:bg-background-alt-dark border border-border dark:border-border-dark rounded-lg p-6 h-full shadow-paper hover:shadow-paper-md transition-all duration-300 transform hover:-translate-y-1">
+            <div class="flex items-start mb-4">
+              <div class="w-10 h-10 rounded-full bg-primary/10 dark:bg-primary-dark/10 flex items-center justify-center mr-4 group-hover:bg-primary/20 dark:group-hover:bg-primary-dark/20 transition-colors">
+                {project.icon === "code" && (
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary dark:text-primary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                )}
+                {project.icon === "refresh" && (
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary dark:text-primary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  </svg>
+                )}
+                {project.icon === "terminal" && (
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary dark:text-primary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                )}
+                {project.icon === "message" && (
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary dark:text-primary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                  </svg>
+                )}
+                {project.icon === "book" && (
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary dark:text-primary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                )}
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-primary dark:text-primary-dark group-hover:text-primary/80 dark:group-hover:text-primary-dark/80 transition-colors">
+                  {project.title}
+                </h3>
+                <p class="text-text-light dark:text-text-light-dark text-sm mt-1 transition-colors duration-300">
+                  {project.description}
+                </p>
+              </div>
+            </div>
+            <div class="flex justify-end">
+              <span class="inline-flex items-center text-primary dark:text-primary-dark text-sm group-hover:translate-x-1 transition-transform duration-300">
+                Visit site
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+    
+    <div class="mt-8 text-center">
+      <p class="text-text-light dark:text-text-light-dark text-sm italic transition-colors duration-300">
+        All tools are built with AI technology to provide intelligent solutions for specific use cases.
+      </p>
+    </div>
+  </div>
+</section>

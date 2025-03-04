@@ -1,0 +1,166 @@
+---
+import ThemeToggle from '../components/ThemeToggle.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Pallav's portfolio - Frontend Engineer with 7+ years of experience" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-background dark:bg-background-dark text-text dark:text-text-dark font-sans bg-dots-pattern dark:bg-dots-pattern-dark bg-[length:20px_20px] transition-colors duration-300">
+    <div class="min-h-screen flex flex-col">
+      <header class="sticky top-0 z-50 bg-background-alt/90 dark:bg-background-alt-dark/90 backdrop-blur-sm shadow-paper border-b border-border dark:border-border-dark transition-colors duration-300">
+        <div class="max-w-3xl mx-auto px-4 py-4">
+          <nav class="flex justify-between items-center">
+            <a href="/" class="text-xl font-bold text-primary dark:text-primary-dark hover:text-primary/80 dark:hover:text-primary-dark/80 transition-colors">
+              <span class="text-primary dark:text-primary-dark">P</span>allav
+            </a>
+            <div class="flex items-center space-x-6">
+              <ul class="flex space-x-6">
+                <li><a href="#about" class="hover:text-primary dark:hover:text-primary-dark transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary dark:after:bg-primary-dark hover:after:w-full after:transition-all after:duration-300">About</a></li>
+                <li><a href="#projects" class="hover:text-primary dark:hover:text-primary-dark transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary dark:after:bg-primary-dark hover:after:w-full after:transition-all after:duration-300">Projects</a></li>
+                <li><a href="#contact" class="hover:text-primary dark:hover:text-primary-dark transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary dark:after:bg-primary-dark hover:after:w-full after:transition-all after:duration-300">Contact</a></li>
+              </ul>
+              <ThemeToggle />
+            </div>
+          </nav>
+        </div>
+      </header>
+      
+      <main class="flex-grow">
+        <slot />
+      </main>
+      
+      <footer class="bg-background-alt dark:bg-background-alt-dark py-6 border-t border-border dark:border-border-dark transition-colors duration-300">
+        <div class="max-w-3xl mx-auto px-4">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-text-light dark:text-text-light-dark mb-4 md:mb-0 text-sm">
+              &copy; {new Date().getFullYear()} Pallav. All rights reserved.
+            </p>
+            <div class="flex space-x-4">
+              <a href="https://github.com/pallavkumarjha" target="_blank" rel="noopener noreferrer" class="text-text-light dark:text-text-light-dark hover:text-primary dark:hover:text-primary-dark transition-colors text-sm">
+                GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/pallavkumarjha/" target="_blank" rel="noopener noreferrer" class="text-text-light dark:text-text-light-dark hover:text-primary dark:hover:text-primary-dark transition-colors text-sm">
+                LinkedIn
+              </a>
+              <a href="https://driftingmiles.vercel.app" target="_blank" rel="noopener noreferrer" class="text-text-light dark:text-text-light-dark hover:text-primary dark:hover:text-primary-dark transition-colors text-sm">
+                Travel Blog
+              </a>
+            </div>
+          </div>
+          <div class="mt-4 text-center">
+            <p class="text-text-lighter dark:text-text-lighter-dark text-xs italic">
+              This website was created with the assistance of AI technology.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script>
+      // Set light mode as default
+      const savedTheme = localStorage.getItem('theme');
+      
+      // Only apply dark mode if explicitly saved as dark
+      if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        // Save light mode preference if not already set
+        if (!savedTheme) {
+          localStorage.setItem('theme', 'light');
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f3f4f6;
+  }
+  
+  .dark ::-webkit-scrollbar-track {
+    background: #1f2937;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 4px;
+  }
+  
+  .dark ::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+  
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+  }
+
+  /* Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .skill-tag {
+    transition: all 0.3s ease;
+  }
+  
+  .skill-tag:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
+  }
+  
+  .dark .skill-tag:hover {
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.4);
+  }
+</style>

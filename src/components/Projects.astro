@@ -1,0 +1,248 @@
+---
+const projects = [
+  // AI Projects
+  {
+    title: "JSON.baby",
+    description: "A clean and efficient JSON formatter tool for developers.",
+    image: "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+    tags: ["JavaScript", "React", "JSON", "Developer Tool", "AI"],
+    type: "AI Tool",
+    githubLink: "https://github.com/pallavkumarjha",
+    demoLink: "https://www.json.baby",
+    date: "2023"
+  },
+  {
+    title: "AI CodeSwitch",
+    description: "Convert code between different programming languages using AI technology.",
+    image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    tags: ["React", "AI", "Code Conversion", "TypeScript"],
+    type: "AI Tool",
+    githubLink: "https://github.com/pallavkumarjha",
+    demoLink: "https://ai-codeswitch.vercel.app",
+    date: "2023"
+  },
+  {
+    title: "AI RegEx Generator",
+    description: "Generate regular expressions from plain text descriptions using AI.",
+    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    tags: ["React", "AI", "RegEx", "Developer Tool"],
+    type: "AI Tool",
+    githubLink: "https://github.com/pallavkumarjha",
+    demoLink: "https://ai-reg.vercel.app",
+    date: "2023"
+  },
+  {
+    title: "AI Prompt Generator",
+    description: "Create effective prompts for any AI tool to get better results.",
+    image: "https://images.unsplash.com/photo-1677442135136-760c813dce26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80",
+    tags: ["React", "AI", "Prompt Engineering"],
+    type: "AI Tool",
+    githubLink: "https://github.com/pallavkumarjha",
+    demoLink: "https://ai-prompt-gen.vercel.app",
+    date: "2023"
+  },
+  {
+    title: "PlotSmith",
+    description: "Generate bedtime stories and help recite them with AI assistance.",
+    image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1373&q=80",
+    tags: ["React", "AI", "Storytelling", "Text Generation"],
+    type: "AI Tool",
+    githubLink: "https://github.com/pallavkumarjha",
+    demoLink: "https://plotsmith.vercel.app",
+    date: "2023"
+  },
+  
+  // New Projects
+  {
+    title: "Should I Read It",
+    description: "Book summary website that helps readers decide if a book is worth their time with concise summaries and reviews.",
+    image: "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    tags: ["React", "Book Summaries", "Reviews", "Reading"],
+    type: "Web",
+    githubLink: "https://github.com/pallavkumarjha",
+    demoLink: "https://shouldireadit.netlify.app/",
+    date: "2023"
+  },
+  {
+    title: "Trip Together",
+    description: "Create and share travel itineraries with friends and family. Plan your perfect trip collaboratively.",
+    image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1421&q=80",
+    tags: ["React", "Travel", "Itinerary Planning", "Collaboration"],
+    type: "Web",
+    githubLink: "https://github.com/pallavkumarjha",
+    demoLink: "https://trip-together-steel.vercel.app",
+    date: "2023"
+  },
+  {
+    title: "Broad",
+    description: "A community app for motorcycle enthusiasts to connect, share routes, plan rides, and discuss their passion.",
+    image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    tags: ["React Native", "Community", "Motorcycles", "Social"],
+    type: "Mobile/App",
+    githubLink: "https://github.com/pallavkumarjha",
+    demoLink: "https://github.com/pallavkumarjha",
+    date: "2023"
+  },
+  {
+    title: "Meeting Recorder",
+    description: "Record offline meetings, generate transcripts, and get AI-powered summaries and action points.",
+    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    tags: ["React", "AI", "Speech-to-Text", "Productivity"],
+    type: "Mobile/App",
+    githubLink: "https://github.com/pallavkumarjha/meeting-recorder",
+    demoLink: "https://github.com/pallavkumarjha/meeting-recorder",
+    date: "2023"
+  },
+  {
+    title: "SplitUp",
+    description: "The smartest way to track shared expenses, settle debts, and manage group spending. Available as both a web platform and mobile app.",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1011&q=80",
+    tags: ["React", "React Native", "Node.js", "Finance", "Cross-platform"],
+    type: "Web & Mobile/App",
+    githubLink: "https://github.com/pallavkumarjha",
+    demoLink: "https://splitup-web.vercel.app/",
+    date: "2023"
+  },
+  {
+    title: "SnapTask",
+    description: "Transform how your team communicates. Create, track, and resolve tasks with unprecedented ease.",
+    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80",
+    tags: ["React", "Node.js", "Team Collaboration", "Productivity"],
+    type: "Web",
+    githubLink: "https://github.com/pallavkumarjha",
+    demoLink: "https://www.snaptask.tech/",
+    date: "2023"
+  },
+];
+
+// Client-side JavaScript for filtering
+---
+
+<section id="projects" class="py-16 bg-background-alt dark:bg-background-alt-dark border-b border-border dark:border-border-dark transition-colors duration-300">
+  <div class="max-w-3xl mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-6 relative inline-block">
+      Projects
+      <span class="absolute -bottom-1 left-0 w-1/2 h-1 bg-primary dark:bg-primary-dark rounded-full"></span>
+    </h2>
+    
+    <div class="flex flex-wrap mb-6 gap-2">
+      <button class="filter-btn px-3 py-1.5 rounded-md bg-primary dark:bg-primary-dark text-white border border-primary dark:border-primary-dark hover:bg-primary/90 dark:hover:bg-primary-dark/90 transition-colors text-sm" data-filter="all">
+        All
+      </button>
+      <button class="filter-btn px-3 py-1.5 rounded-md bg-background dark:bg-background-dark border border-border dark:border-border-dark hover:bg-border/30 dark:hover:bg-border-dark/30 transition-colors text-sm" data-filter="AI Tool">
+        AI Tools
+      </button>
+      <button class="filter-btn px-3 py-1.5 rounded-md bg-background dark:bg-background-dark border border-border dark:border-border-dark hover:bg-border/30 dark:hover:bg-border-dark/30 transition-colors text-sm" data-filter="Web">
+        Web
+      </button>
+      <button class="filter-btn px-3 py-1.5 rounded-md bg-background dark:bg-background-dark border border-border dark:border-border-dark hover:bg-border/30 dark:hover:bg-border-dark/30 transition-colors text-sm" data-filter="Mobile/App">
+        Mobile & Apps
+      </button>
+    </div>
+    
+    <div class="space-y-8" id="projects-container">
+      {projects.map(project => (
+        <div class="project-card bg-background-alt dark:bg-background-alt-dark border border-border dark:border-border-dark rounded-lg overflow-hidden shadow-paper hover:shadow-paper-md transition-all hover:-translate-y-1 transform duration-300" data-type={project.type}>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold hover:text-primary dark:hover:text-primary-dark transition-colors">
+                <a href={project.demoLink} target="_blank">{project.title}</a>
+              </h3>
+              <span class="text-xs text-text-light dark:text-text-light-dark">{project.date}</span>
+            </div>
+            
+            <p class="text-text-light dark:text-text-light-dark mb-4 text-sm transition-colors duration-300">
+              {project.description}
+            </p>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              {project.tags.map(tag => (
+                <span class="px-3 py-1 bg-background dark:bg-background-dark text-xs rounded-full border border-primary/10 dark:border-primary-dark/20 font-mono text-primary dark:text-primary-dark transition-colors duration-300">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            
+            <div class="flex space-x-4">
+              <a 
+                href={project.demoLink} 
+                target="_blank"
+                class="inline-flex items-center text-primary dark:text-primary-dark hover:text-primary/80 dark:hover:text-primary-dark/80 transition-colors text-sm group"
+              >
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+              
+              <a 
+                href={project.githubLink} 
+                target="_blank"
+                class="inline-flex items-center text-text-light dark:text-text-light-dark hover:text-primary dark:hover:text-primary-dark transition-colors text-sm group"
+              >
+                GitHub
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  // Project filtering functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Update active button styling
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-primary', 'dark:bg-primary-dark', 'text-white');
+          btn.classList.add('bg-background', 'dark:bg-background-dark');
+        });
+        button.classList.remove('bg-background', 'dark:bg-background-dark');
+        button.classList.add('bg-primary', 'dark:bg-primary-dark', 'text-white');
+        
+        const filter = button.getAttribute('data-filter');
+        
+        projectCards.forEach(card => {
+          const type = card.getAttribute('data-type');
+          
+          if (filter === 'all' || type === filter || 
+              // Handle the combined category case
+              (filter === 'Mobile/App' && (type === 'Mobile' || type === 'App' || type.includes('Mobile') || type.includes('App'))) ||
+              // Handle the Web & Mobile/App case for SplitUp
+              (filter === 'Web' && type.includes('Web')) ||
+              (filter === 'Mobile/App' && type.includes('Mobile'))) {
+            card.style.display = 'block';
+            // Add a small animation when cards appear
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 50);
+          } else {
+            card.style.display = 'none';
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(10px)';
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  .project-card {
+    transition: all 0.3s ease;
+  }
+  
+  .filter-btn {
+    transition: all 0.3s ease;
+  }
+</style>
